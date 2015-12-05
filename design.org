@@ -1,0 +1,27 @@
+#+TITLE: Simple music player
+
+* Requirements
+  - Should be able to play any format (mp3, ogg etc...)
+  - Should be able to save and load playlists
+  - Should be able to decide which song to play
+    
+* Design
+** Layer 1 : Interface
+   - load_playlist(filename)
+     - Should load a playlist from a given file. Will return a
+       "Playlist" object
+** Layer 2 : Player
+   - Playlist - An object representing a playlist
+     - get_song_list - returns a list of files
+     - add_song(filename) - Will add the given file to the playlist
+     - save(filename) - Will save the playlist to the given filename
+     - play(filename) - Should play the song specified
+     
+** Layer 3 : tracks 
+   - get_track(filename).
+     - Returns a Track object corresponding to type of file.
+   - Track
+     - play()
+     - stop()
+     - get_metadata()
+
